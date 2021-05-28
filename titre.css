@@ -1,0 +1,28 @@
+h1 {
+	color:red;
+	font-family: cursive; 
+	text-shadow: 2px 2px 3px black;
+}
+body{
+	background-color: #808080;
+}
+#B_php{
+	background-image: url("php.jpg");
+	background-size: 100%;
+}
+#aa{
+	background-image: url("formation.png");
+	background-size: 100%;
+}
+.Consulter {
+	color: orange;
+	font-weight: bold;
+	font-size: 40px;
+	font-family: sans-serif;
+}
+.liste{
+	font-size: 30px;
+	line-height: 3em;
+	font-family: Helvetica;
+	color: pink;
+}

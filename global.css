@@ -1,0 +1,45 @@
+h1 {
+	color:red;
+	font-family: cursive; 
+	text-shadow: 2px 2px 3px black;
+}
+body{
+	background-color: #808080;
+}
+#B_php,#B_css{
+	background-size: 100%;
+	margin: auto;
+	width: 800px;
+	font-family: Montserrat;
+}
+#B_css{
+	background-image: url("css.jpg");
+}
+#B_php
+{
+     background-image: url("php.jpg");
+}
+.form
+{
+	border: solid green;
+	margin-top: 50px;
+   padding: 15px;
+   box-shadow: 0px 0px 10px #87CEEB; 
+   background-color: #87CEEB;
+}
+#aa{
+	background-image: url("formation.png");
+	background-size: 100%;
+}
+.Consulter {
+	color: orange;
+	font-weight: bold;
+	font-size: 40px;
+	font-family: sans-serif;
+}
+.liste{
+	font-size: 30px;
+	line-height: 3em;
+	font-family: Helvetica;
+	color: pink;
+}

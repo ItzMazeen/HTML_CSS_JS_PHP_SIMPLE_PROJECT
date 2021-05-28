@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>php</title>
+		<link rel="stylesheet" type="text/css" href="global.css">
+		 <script type="text/javascript">
+/* Function to Generat Captcha */
+function GenerateCaptcha() {
+var chr1 = Math.ceil(Math.random() * 10)+ '';
+var chr2 = Math.ceil(Math.random() * 10)+ '';
+var chr3 = Math.ceil(Math.random() * 10)+ '';
+var chr4 = Math.ceil(Math.random() * 10)+ '';
+var chr5 = Math.ceil(Math.random() * 10)+ '';
+var chr6 = Math.ceil(Math.random() * 10)+ '';
+var chr7 = Math.ceil(Math.random() * 10)+ '';
+ 
+var captchaCode = chr1 + ' ' + chr2 + ' ' + chr3 + ' ' + chr4 + ' ' + chr5 + ' '+ chr6 + ' ' + chr7;
+document.getElementById("txtCaptcha").value = captchaCode
+}
+ 
+/* Validating Captcha Function */
+function ValidCaptcha() {
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('txtCompare').value);
+ 
+if (str1 == str2) return true;
+return false;
+}
+ 
+/* Remove spaces from Captcha Code */
+function removeSpaces(string) {
+return string.split(' ').join('');
+}
+</script>
+</head>
+<body id="B_php" onload="GenerateCaptcha();">
+
+	<form class="form" method="post" action="ajout.php">
+		<fieldset form="form">
+			<legend><b>Formation PHP</b></legend>
+			<pre>
+		<b> Nom :     </b><input type="text" name="Nom" required > <b>Prenom :  </b><input type="text" name="Prenom" required><br>
+		<b>Password : </b><input type="Password" name="Password"> <b>Email :  </b> <input type="email" name="mail" required=""> <br> 
+		</pre>
+		<p><center><label for="sexe"> <b>Sexe : </b></label><input type="radio" id="sexe1" name="action"  value="H"> Homme <input type="radio" name="action"value="F" id="sexe1" > Femme </p><br>
+		<b>Date de naissance : </b><input type="date" name="birthday" required ><br>
+	   <br><b> Plus d'information : </b><br><br><textarea name="info" rows=5 cols=20 placeholder="Pourquoi tu choisi cette formation ? "></textarea><br>
+	   <b> <br>Choisir votre pays : </b><select name="pays"required>
+	    	<option>Tunisia</option>
+	    	<option>Algeria</option>
+	    	<option>Maroc</option>
+	    	<option>Libye</option>
+	    	<option>Egypt</option> </select></center>
+	  <br>
+	    <center><b>Type the numberes :</b></center><br>
+	    <center>
+	    <input type="text" id="txtCaptcha" style="text-align: center; border: none; font-weight: bold; font-family: Modern" disabled />
+<input type="button" id="btnrefresh" value="Refresh" onclick="GenerateCaptcha();"  />
+<input type="text" id="txtCompare"  required/>
+<input id="btnValid" type="button" value="Check" required onclick="alert(ValidCaptcha());"  /></center><br>
+<br><center><input type="submit" name="enregistre" value="Rejoindre formation" ></center>
+
+	</fieldset>
+	</form>
+
+
+</body>
+</html>
